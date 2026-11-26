@@ -114,6 +114,7 @@ section{padding:clamp(48px,7vw,88px) 0;border-top:1px solid var(--rule)}
 .shots figure.main{grid-column:1/-1}
 .shots button{display:block;width:100%;padding:0;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--panel);cursor:zoom-in}
 .shots img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left}
+.shots.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 .shots figcaption{font-size:13px;color:var(--slate);padding:6px 2px 0}
 .note{font-size:13px;color:var(--slate);margin:0 0 6px}
 
@@ -232,8 +233,8 @@ section{padding:18pt 0;break-inside:auto}
 
   <div class="stats">
     <div class="wrap">
-      <div class="stat key"><b>5 systems</b><span>built or maintained, in real use</span></div>
-      <div class="stat"><b>Paying client</b><span>running my own product, Buildtrack</span></div>
+      <div class="stat key"><b>6 systems</b><span>built, extended or maintained</span></div>
+      <div class="stat"><b>Paying client</b><span>using Buildtrack every day</span></div>
       <div class="stat"><b>Android</b><span>signed release builds for Google Play</span></div>
       <div class="stat"><b>End to end</b><span>database, API, UI and deployment</span></div>
     </div>
@@ -259,25 +260,32 @@ section{padding:18pt 0;break-inside:auto}
 
   <section id="work">
     <div class="wrap">
-      <div class="head"><h2>Selected work</h2><p>Five systems in production or on their way there. Each entry covers what the system does, what I built, and a problem I solved along the way.</p></div>
+      <div class="head"><h2>Selected work</h2><p>Six systems in production or on their way there. Each entry covers what the system does, my part in it, and a problem I solved along the way.</p></div>
 
       <article class="proj">
         <div class="meta">
           <span class="tag live">In use by a paying client</span>
           <h3>Buildtrack</h3>
-          <p class="type">Inventory, sales and finance platform for retail businesses. My own product, sole developer.</p>
+          <p class="type">Inventory, sales and finance platform for retail businesses. Co-developer: I extend and maintain it on a foundation laid by another developer.</p>
           <ul class="stack"><li>Laravel</li><li>Vue.js</li><li>PostgreSQL</li><li>Neon</li><li>Docker</li><li>Render</li></ul>
         </div>
         <div class="body">
-          <p>Covers stock coming in, sales going out and where the money is at the end of the day. I'm extending it based on the client's feedback.</p>
-          <h4>What I built</h4>
+          <p>Covers stock coming in, sales going out and where the money is at the end of the day. The core (point of sale, stock, credit sales and reports) was in place when I joined; I'm extending it from the client's feedback.</p>
+          <div class="shots">
+            <figure><button type="button" data-full="img/bt-pos.jpg" data-cap="Buildtrack: the Make a Sale screen with today's totals and quick product picks"><img src="img/bt-pos.jpg" alt="Buildtrack Make a Sale screen" loading="lazy"></button><figcaption>Make a Sale</figcaption></figure>
+            <figure><button type="button" data-full="img/bt-stock.jpg" data-cap="Buildtrack: live stock balance per batch, batch numbers and quantities blurred"><img src="img/bt-stock.jpg" alt="Buildtrack Stock Remaining table with batch numbers and quantities blurred" loading="lazy"></button><figcaption>Stock remaining</figcaption></figure>
+            <figure><button type="button" data-full="img/bt-finance.jpg" data-cap="Buildtrack: Financial Overview, profit counted on money actually collected"><img src="img/bt-finance.jpg" alt="Buildtrack Financial Overview cards" loading="lazy"></button><figcaption>Financial overview</figcaption></figure>
+          </div>
+          <p class="note">Screenshots from the live system. Client figures are blurred. Select one to enlarge.</p>
+          <h4>What I added</h4>
           <ul>
-            <li>Point of sale with barcode scanning, selling by piece or unit, credit sales and a "Who Owes Me" ledger. Prices can change at the till but never below cost.</li>
-            <li>Money tracked across cash, mobile money and bank, with a daily cash count that shows any shortfall and locks the day.</li>
-            <li>Profit counted when money is actually collected, so credit sales don't inflate it. Nine reports, including weekly performance and profit and loss, exported to Excel.</li>
-            <li>Payroll for workers without logins: PAYE and LST deductions, approved pay advances and running balances.</li>
-            <li>Offline mode: sales, deliveries and expenses are stored on the device and uploaded once, with their original time, when the connection returns.</li>
-            <li>Per-action permissions checked on the server, a history of every change, and a deploy pipeline that rolls back if a migration fails.</li>
+            <li>Security fixes first: locked down login, OTP and password reset, and moved permission checks onto the server for every action.</li>
+            <li>Custom selling prices at the till that can never go below cost.</li>
+            <li>Money tracked across cash, mobile money and bank wallets, with a daily cash count that shows any shortfall and records cash banked or taken out.</li>
+            <li>Expenses, including wages for workers who have no login, feeding an overview of stock value, revenue, expenses and profit.</li>
+            <li>Payroll with PAYE and LST set per worker, pay advances and running balances.</li>
+            <li>Offline mode: sales, deliveries and expenses are stored on the device and uploaded, with their original time, when the connection returns.</li>
+            <li>Moved the database to Neon PostgreSQL after the original host expired it.</li>
           </ul>
         </div>
       </article>
@@ -335,6 +343,11 @@ section{padding:18pt 0;break-inside:auto}
         </div>
         <div class="body">
           <p>Serves savings groups and their mobile money payments. I review the back end, maintain the portal on a production server and audit the data.</p>
+          <div class="shots two">
+            <figure><button type="button" data-full="img/vsla-dashboard.jpg" data-cap="VSLA platform: the dashboard I audit figures against, all figures blurred"><img src="img/vsla-dashboard.jpg" alt="VSLA dashboard with all figures blurred" loading="lazy"></button><figcaption>VSLA dashboard</figcaption></figure>
+            <figure><button type="button" data-full="img/vsla-loans.jpg" data-cap="VSLA platform: loan performance tracker, member details and amounts blurred"><img src="img/vsla-loans.jpg" alt="Loan performance tracker with member details and amounts blurred" loading="lazy"></button><figcaption>Loan tracker</figcaption></figure>
+          </div>
+          <p class="note">Screens from the platform I work on, not all built by me. Names, figures and branding are blurred.</p>
           <div class="case">
             <b>Case study: group balances shown too high</b>
             <p><strong>Problem.</strong> Some savings groups were shown far more money than they held, and could request loans the group couldn't cover.</p>
@@ -364,10 +377,34 @@ section{padding:18pt 0;break-inside:auto}
             <p><strong>Cause.</strong> The server returned an empty wallet field for most groups. The app treated it as required and crashed, and a catch-all handler showed the crash as "Invalid Phone Number or Password".</p>
             <p class="res">Result: making the field optional restored logins, confirmed on a live test group.</p>
           </div>
+          <div class="case">
+            <b>Case study: PIN reset that can't be abused</b>
+            <p><strong>Problem.</strong> Members who forgot their PIN had no way back in from the app, and the existing reset endpoint only asked for a phone number, so anyone could keep resetting someone else's PIN and burn SMS credit.</p>
+            <p><strong>Fix.</strong> I added a Forgot PIN button to the app (release 1.0.4), kept the USSD route (enter 00 at the PIN prompt), and limited resets on the server to one every 5 minutes and three a day per member. Every request is logged against the right member, and if the limit check ever fails the reset still goes through, so genuine members are never blocked.</p>
+            <p class="res">Result: members can reset their own PIN from the app or USSD, with the nuisance capped. I documented the deployment and rollback for the backend team.</p>
+          </div>
           <h4>Also</h4>
           <ul>
             <li>Kept the Retry button on failed loan payouts until the money is actually paid out.</li>
             <li>Gave group officers (chair, secretary, treasurer) admin rights and moved the app to the new brand palette.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="meta">
+          <span class="tag">Contributor</span>
+          <h3>Destudio Estate</h3>
+          <p class="type">Property management system for rental estates. Collaborator on another developer's codebase.</p>
+          <ul class="stack"><li>PHP</li><li>MariaDB / MySQL</li><li>GitHub</li></ul>
+        </div>
+        <div class="body">
+          <p>Puts rent, water and electricity billing, tenants, staff, repairs and requests for an estate in one place, with a separate portal where tenants see only their own payments and requests.</p>
+          <h4>My part</h4>
+          <ul>
+            <li>Added a date-range filter to every page where records are stored or viewed, so staff can pull any period instead of scrolling through everything.</li>
+            <li>Reviewed the code and database before starting the upgrade.</li>
+            <li>Wrote the system manual and client walkthrough: roles, every module, the monthly billing cycle and a 20-minute demo script for selling it to new clients.</li>
           </ul>
         </div>
       </article>
@@ -400,10 +437,10 @@ section{padding:18pt 0;break-inside:auto}
       <div class="head"><h2>Experience</h2><p>Recent roles and the work delivered in each.</p></div>
       <ul class="xp">
         <li><time>2026 – present</time><div><h3>Founder, mobile money payments platform</h3><p>Designing one API and dashboard that lets any back end collect and pay out through MTN Mobile Money and Airtel Money, with automatic status checks, retries and reconciliation.</p></div></li>
-        <li><time>2026 – present</time><div><h3>Founder and sole developer, Buildtrack</h3><p>Designed, built and deployed a retail inventory, sales and finance platform now used by a paying client. Currently adding wallets, payroll and offline sales.</p></div></li>
+        <li><time>2026 – present</time><div><h3>Co-developer, Buildtrack</h3><p>Extending and maintaining a retail inventory, sales and finance platform used by a paying client: security fixes, wallets and cash counts, expenses, payroll and offline sales.</p></div></li>
         <li><time>2026 – present</time><div><h3>Software developer, E-Gwoko VSLA platform</h3><p>Lead on the new Capacitor Android app (signed release 1.2, October), reviewed and fixed the Laravel 11 API, corrected group balance calculations (November) and restored logins on the legacy Kotlin app.</p></div></li>
         <li><time>2026</time><div><h3>Full-stack developer, employee management system</h3><p>Built an HR and payroll system from scratch in Laravel 13 and React 19, with server-side pay calculation, role-based access and a full audit trail.</p></div></li>
-        <li><time>Ongoing</time><div><h3>Freelance and team collaboration</h3><p>Contribute to client codebases through GitHub and GitLab, from feature upgrades such as reporting filters to code review and database support.</p></div></li>
+        <li><time>Ongoing</time><div><h3>Freelance and team collaboration</h3><p>Contribute to client codebases through GitHub and GitLab, such as date-range filters and the system manual for the Destudio Estate property system, plus code review and database support.</p></div></li>
       </ul>
     </div>
   </section>
