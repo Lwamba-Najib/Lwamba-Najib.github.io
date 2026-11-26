@@ -47,9 +47,13 @@ h1,h2,h3{font-weight:800;letter-spacing:-.02em;line-height:1.08;margin:0;text-wr
 .top nav a:hover{color:var(--ink);background:var(--panel)}
 .top nav a.hire{background:var(--ink);color:var(--bg);margin-left:6px}
 
-.hero{padding:clamp(40px,6vw,80px) 0 clamp(40px,5vw,64px)}
+.hero{padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(40px,5vw,64px)}
 .intro{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:end}
-.avatar{display:block;width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:3px solid var(--yellow);margin:0 0 20px}
+.avatar{display:block;width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:3px solid var(--yellow);margin:0}
+.avatar-btn{display:block;padding:0;border:0;background:none;border-radius:50%;cursor:zoom-in;margin:0 0 20px}
+.avatar-btn:hover .avatar{transform:scale(1.04)}
+@media(prefers-reduced-motion:no-preference){.avatar{transition:transform .15s ease}}
+.stat.key span{display:block;margin-top:8px}
 .hero h1{font-size:clamp(40px,6vw,64px);margin-bottom:18px}
 .hero .role{font-size:clamp(19px,2.2vw,23px);font-weight:600;color:var(--ink);margin:0 0 14px;max-width:34ch;line-height:1.4}
 .hero .sum{color:var(--slate);margin:0 0 26px;max-width:58ch}
@@ -207,9 +211,9 @@ section{padding:18pt 0;break-inside:auto}
   <div class="wrap hero">
     <div class="intro">
       <div>
-        <img class="avatar" src="img/avatar.jpg" alt="Lwamba Musa Najib" width="120" height="120">
+        <button type="button" class="avatar-btn" data-full="img/avatar.jpg" data-cap="Lwamba Musa Najib" aria-label="View profile picture"><img class="avatar" src="img/avatar.jpg" alt="Lwamba Musa Najib" width="120" height="120"></button>
         <h1>Lwamba Musa Najib</h1>
-        <p class="role">Full-stack software engineer building web and Android systems for savings groups, payroll and retail.</p>
+        <p class="role">Full-stack software engineer building web and Android systems for savings groups, payroll, retail, property management and payments.</p>
         <p class="sum">I design the database, write the API and ship the interface, then take it all the way to a live release on a server or the Google Play Store. Most of my work handles money, so correctness, permissions and clear audit trails come first.</p>
         <div class="cta">
           <a class="btn primary" href="#work">View case studies</a>
@@ -221,9 +225,9 @@ section{padding:18pt 0;break-inside:auto}
         <ul class="facts">
           <li><span>Based in</span><span>Uganda (EAT, UTC+3)</span></li>
           <li><span>Platforms</span><span>Web, PWA, Android, APIs</span></li>
-          <li><span>Core stack</span><span>Laravel, React, Vue.js</span></li>
-          <li><span>Data</span><span>SQL, PostgreSQL</span></li>
-          <li><span>Domain</span><span>Fintech, HR, retail</span></li>
+          <li><span>Core stack</span><span>Laravel, PHP, React, Vue.js</span></li>
+          <li><span>Data</span><span>PostgreSQL, MySQL, Supabase</span></li>
+          <li><span>Domain</span><span>Fintech, HR, retail, property</span></li>
         </ul>
       </aside>
     </div>
@@ -243,8 +247,8 @@ section{padding:18pt 0;break-inside:auto}
       <div class="head"><h2>About me</h2><p>An engineer who owns the whole system, from the schema to the release.</p></div>
       <div class="about">
         <div>
-          <p>I work across the stack: React, Vue.js and Capacitor on the front end, Laravel and PHP behind it, Kotlin when a native Android app needs fixing, and PostgreSQL holding it together.</p>
-          <p>The people using my software are savings group members checking loans on their phones, HR teams running monthly payroll, and shop owners who need to know what is in the drawer at the end of the day. They can't afford for the numbers to be wrong, so I build with that in mind.</p>
+          <p>I work across the stack: React, Vue.js and Capacitor on the front end, Laravel and PHP behind it, Kotlin when a native Android app needs fixing, Three.js for 3D, and PostgreSQL or MySQL holding it together.</p>
+          <p>The people using my software are savings group members checking loans on their phones, HR teams running monthly payroll, estate managers tracking rent and utilities, and shop owners who need to know what is in the drawer at the end of the day. They can't afford for the numbers to be wrong, so I build with that in mind.</p>
           <p>I also look after the data and infrastructure: I write SQL against production databases to investigate problems and correct records, migrate databases between hosts, and run my own deployments on Docker, Render and cPanel servers.</p>
         </div>
         <div class="ways">
@@ -258,7 +262,7 @@ section{padding:18pt 0;break-inside:auto}
 
   <section id="work">
     <div class="wrap">
-      <div class="head"><h2>Selected work</h2><p>Six systems in production or on their way there. Each entry covers what the system does, my part in it, and a problem I solved along the way.</p></div>
+      <div class="head"><h2>Selected work</h2><p>Seven of my nine systems: the VSLA web portal and its payments back end are covered together in one entry, and the other two are under What I'm building now. Each entry covers what the system does, my part in it, and a problem I solved along the way.</p></div>
 
       <article class="proj">
         <div class="meta">
@@ -328,6 +332,7 @@ section{padding:18pt 0;break-inside:auto}
           <ul>
             <li>The app in React and Vite, packaged for Android with Capacitor and connected to a Laravel 11 API.</li>
             <li>The full release process: signing keys, signed app bundles and the Google Play listing.</li>
+            <li>Held back from public release until member data moves from the old system to the new back end; the new app will then replace the legacy one on Google Play.</li>
             <li>Next: an in-app member onboarding module so officers can register members without going to the web portal.</li>
           </ul>
         </div>
@@ -442,7 +447,7 @@ section{padding:18pt 0;break-inside:auto}
       <ul class="xp">
         <li><time>2026 – present</time><div><h3>Founder, mobile money payments platform</h3><p>Designing one API and dashboard that lets any back end collect and pay out through MTN Mobile Money and Airtel Money, with automatic status checks, retries and reconciliation.</p></div></li>
         <li><time>2026 – present</time><div><h3>Co-developer, Buildtrack</h3><p>Extending and maintaining a retail inventory, sales and finance platform used by a paying client: security fixes, wallets and cash counts, expenses, payroll and offline sales.</p></div></li>
-        <li><time>2026 – present</time><div><h3>Software developer, E-Gwoko VSLA platform</h3><p>Lead on the new Capacitor Android app (signed release 1.2, October), reviewed and fixed the Laravel 11 API, corrected group balance calculations (November) and restored logins on the legacy Kotlin app.</p></div></li>
+        <li><time>2026 – present</time><div><h3>Software developer, E-Gwoko VSLA platform</h3><p>Lead on the new Capacitor Android app (signed release 1.2, October), reviewed and fixed the Laravel 11 API, added an abuse-proof PIN reset (October), corrected group balance calculations and audited loan payouts (November), and restored logins on the legacy Kotlin app.</p></div></li>
         <li><time>2026</time><div><h3>Full-stack developer, employee management system</h3><p>Built an HR and payroll system from scratch in Laravel 13 and React 19, with server-side pay calculation, role-based access and a full audit trail.</p></div></li>
         <li><time>Ongoing</time><div><h3>Freelance and team collaboration</h3><p>Contribute to client codebases through GitHub and GitLab, such as date-range filters and the system manual for the Destudio Estate property system, plus code review and database support.</p></div></li>
       </ul>
@@ -453,10 +458,10 @@ section{padding:18pt 0;break-inside:auto}
     <div class="wrap">
       <div class="head"><h2>Skills</h2><p>Tools I use in production work.</p></div>
       <div class="skills">
-        <div class="skill"><h3>Languages</h3><ul><li>JavaScript</li><li>PHP</li><li>Kotlin</li><li>SQL</li></ul></div>
-        <div class="skill"><h3>Front end</h3><ul><li>React and Vite</li><li>Vue.js</li><li>Progressive Web Apps</li><li>jQuery</li><li>Tailwind CSS</li><li>Materialize CSS</li></ul></div>
-        <div class="skill"><h3>Back end and mobile</h3><ul><li>Laravel 11 and 13</li><li>Laravel Sanctum</li><li>REST APIs</li><li>Capacitor</li><li>Android SDK</li></ul></div>
-        <div class="skill"><h3>Databases</h3><ul><li>PostgreSQL, Neon</li><li>Supabase</li><li>Query tuning and data fixes</li><li>Migrations between hosts</li></ul></div>
+        <div class="skill"><h3>Languages</h3><ul><li>JavaScript</li><li>PHP</li><li>Kotlin</li><li>SQL</li><li>HTML and CSS</li></ul></div>
+        <div class="skill"><h3>Front end</h3><ul><li>React and Vite</li><li>Vue.js</li><li>Progressive Web Apps</li><li>jQuery</li><li>Tailwind CSS</li><li>Materialize CSS</li><li>Three.js</li></ul></div>
+        <div class="skill"><h3>Back end and mobile</h3><ul><li>Laravel 11 and 13</li><li>Laravel Sanctum</li><li>REST APIs</li><li>Capacitor</li><li>Android SDK</li><li>USSD services</li><li>Mobile money payment APIs</li></ul></div>
+        <div class="skill"><h3>Databases</h3><ul><li>PostgreSQL, Neon</li><li>MySQL, MariaDB</li><li>Supabase</li><li>Query tuning and data fixes</li><li>Migrations between hosts</li></ul></div>
         <div class="skill"><h3>Delivery</h3><ul><li>Git, GitHub, GitLab</li><li>Docker, Render</li><li>cPanel, Linux</li><li>Google Play Console</li></ul></div>
       </div>
     </div>
