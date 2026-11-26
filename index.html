@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lwamba Musa Najib</title>
+<meta name="description" content="Lwamba Musa Najib, full-stack software engineer in Uganda. Developer of the E-Gwoko VSLA Android app, the Buildtrack inventory and sales platform and an HR and payroll system. Laravel, React, Vue.js, PostgreSQL, Supabase.">
+<link rel="canonical" href="https://lwamba-najib.github.io/">
+<meta property="og:url" content="https://lwamba-najib.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23101418'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='%23ffd84a' text-anchor='middle'%3ELN%3C/text%3E%3C/svg%3E">
+<meta name="author" content="Lwamba Musa Najib">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Lwamba Musa Najib, full-stack software engineer">
+<meta property="og:description" content="Web and Android systems for savings groups, payroll and retail. Developer of E-Gwoko VSLA and Buildtrack.">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Lwamba Musa Najib","jobTitle":"Full-stack software engineer","email":"mailto:najib2019reloaded@gmail.com","address":{"@type":"PostalAddress","addressCountry":"UG"},"url":"https://lwamba-najib.github.io/","sameAs":["https://github.com/Lwamba-Najib"],"knowsAbout":["Laravel","React","Vue.js","PostgreSQL","Supabase","Capacitor","Android","Mobile money payments","VSLA software","Payroll systems"],"workExample":[{"@type":"SoftwareApplication","name":"E-Gwoko VSLA","operatingSystem":"Android","applicationCategory":"FinanceApplication"},{"@type":"SoftwareApplication","name":"Buildtrack","applicationCategory":"BusinessApplication"},{"@type":"SoftwareApplication","name":"Employee management system","applicationCategory":"BusinessApplication"}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: a hiring manager's first look, calm and exact
+   IDEA an engineer's case-study file: real screens, problem, fix, result
+   PICTURE the employee dashboard in a browser frame, full width under the title
+   COLOUR white, ink #101418, slate, one yellow slab behind the key figure
+   TYPE Manrope 800 for headings, Manrope for text
+   LAYOUT title and contact panel across the top, screenshot beneath; phone stacks title, picture, panel */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#101418);--ink:light-dark(#101418,#eef1f4);--slate:light-dark(#4a5562,#a7b0bb);--rule:light-dark(#e3e6ea,#262d35);--panel:light-dark(#f5f6f8,#171c22);--yellow:#ffd84a;--on-yellow:#101418;--link:light-dark(#0b57b8,#8ab8ff)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16.5px/1.6 Manrope,"Segoe UI",system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:var(--link);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--link);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 max(5vw,16px)}
+h1,h2,h3{font-weight:800;letter-spacing:-.02em;line-height:1.08;margin:0;text-wrap:balance}
+
+.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;flex-wrap:wrap}
+.mark{font-weight:800;color:var(--ink);text-decoration:none;font-size:17px}
+.top nav{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+.top nav a{color:var(--slate);text-decoration:none;font-weight:600;font-size:15px;padding:10px 12px;border-radius:6px}
+.top nav a:hover{color:var(--ink);background:var(--panel)}
+.top nav a.hire{background:var(--ink);color:var(--bg);margin-left:6px}
+
+.hero{padding:clamp(40px,6vw,80px) 0 0}
+.intro{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:end}
+.hero h1{font-size:clamp(40px,6vw,64px);margin-bottom:18px}
+.hero .role{font-size:clamp(19px,2.2vw,23px);font-weight:600;color:var(--ink);margin:0 0 14px;max-width:34ch;line-height:1.4}
+.hero .sum{color:var(--slate);margin:0 0 26px;max-width:58ch}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:8px;font:700 15px/1 Manrope,system-ui,sans-serif;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-1px)}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:22px}
+.avail{display:flex;align-items:center;gap:10px;font-weight:700;margin:0 0 14px}
+.dot{width:10px;height:10px;border-radius:50%;background:#1f9d55;box-shadow:0 0 0 4px color-mix(in srgb,#1f9d55 22%,transparent);flex:none}
+.facts{list-style:none;margin:0;padding:0}
+.facts li{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-top:1px solid var(--rule);font-size:15px}
+.facts span:first-child{color:var(--slate)}
+.facts span:last-child{font-weight:600;text-align:right}
+
+.shot{margin:clamp(36px,5vw,56px) 0 0;border:1px solid var(--rule);border-radius:12px 12px 0 0;border-bottom:0;overflow:hidden;background:var(--panel)}
+.bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--rule)}
+.bar i{width:11px;height:11px;border-radius:50%;background:var(--rule)}
+.bar span{margin-left:10px;font-size:13px;color:var(--slate);background:var(--bg);border:1px solid var(--rule);border-radius:6px;padding:3px 12px;flex:1;max-width:420px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.shot button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.shot img{display:block;width:100%;height:clamp(220px,38vw,440px);object-fit:cover;object-position:top left}
+
+.stats{background:var(--ink);color:var(--bg)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.stat{padding:26px 22px 26px 0;border-right:1px solid color-mix(in srgb,var(--bg) 18%,transparent)}
+.stat+.stat{padding-left:22px}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:clamp(26px,3vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.stat span{font-size:14.5px;opacity:.82}
+.stat.key b{display:inline-block;background:var(--yellow);color:var(--on-yellow);padding:2px 10px;margin-left:-10px;border-radius:4px}
+
+section{padding:clamp(48px,7vw,88px) 0;border-top:1px solid var(--rule)}
+.stats+section{border-top:0}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:24px 56px;margin-bottom:36px;align-items:end}
+.head h2{font-size:clamp(30px,3.6vw,42px)}
+.head p{margin:0;color:var(--slate);max-width:60ch}
+
+.about{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(28px,5vw,64px)}
+.about p{margin:0 0 16px;max-width:64ch}
+.ways{display:grid;gap:12px}
+.ways .card{padding:18px 20px}
+.ways h3{font-size:17px;letter-spacing:-.01em;margin-bottom:4px}
+.ways p{margin:0;color:var(--slate);font-size:15.5px}
+
+.proj{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:clamp(24px,4vw,56px);padding:36px 0;border-top:1px solid var(--rule)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.meta h3{font-size:clamp(24px,2.6vw,30px);margin-bottom:8px}
+.meta .type{color:var(--slate);font-size:15px;margin:0 0 16px}
+.tag{display:inline-block;font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px;margin-bottom:14px;border:1px solid var(--rule);background:var(--panel)}
+.tag.live{background:color-mix(in srgb,#1f9d55 14%,var(--bg));border-color:color-mix(in srgb,#1f9d55 40%,var(--bg))}
+.stack{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
+.stack li{font-size:13px;font-weight:600;padding:5px 10px;border-radius:6px;border:1px solid var(--rule)}
+.body>p{margin:0 0 16px;max-width:66ch}
+.body h4{font-size:14px;font-weight:800;margin:20px 0 6px;color:var(--slate)}
+.body ul{margin:0;padding-left:20px;max-width:66ch}
+.body li{margin-bottom:7px}
+.case{border-left:3px solid var(--ink);padding:4px 0 4px 18px;margin:20px 0 0;max-width:66ch}
+.case b{display:block;margin-bottom:6px}
+.case p{margin:0 0 8px;color:var(--slate)}
+.case p.res{color:var(--ink);font-weight:600;margin:0}
+
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 18px}
+.shots figure{margin:0}
+.shots figure.main{grid-column:1/-1}
+.shots button{display:block;width:100%;padding:0;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--panel);cursor:zoom-in}
+.shots img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left}
+.shots figcaption{font-size:13px;color:var(--slate);padding:6px 2px 0}
+.note{font-size:13px;color:var(--slate);margin:0 0 6px}
+
+.now{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.now .card{padding:24px}
+.now h3{font-size:clamp(21px,2.2vw,24px);margin-bottom:8px}
+.now p{margin:0 0 16px;color:var(--slate);max-width:60ch}
+.xp{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.xp li{display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr);gap:8px 32px;padding:22px 0;border-top:1px solid var(--rule)}
+.xp time{color:var(--slate);font-weight:600;white-space:nowrap}
+.xp h3{font-size:19px;letter-spacing:-.01em;margin-bottom:4px}
+.xp p{margin:0;color:var(--slate);max-width:70ch}
+
+.skills{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.skill{border-top:2px solid var(--ink);padding-top:14px}
+.skill h3{font-size:16px;letter-spacing:-.01em;margin-bottom:10px}
+.skill ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;color:var(--slate);font-size:15.5px}
+
+.contact{background:var(--ink);color:var(--bg);border-top:0}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:start}
+.contact h2{font-size:clamp(32px,4.4vw,48px);margin-bottom:14px}
+.contact p{opacity:.85;margin:0 0 24px;max-width:46ch}
+.contact .btn{border-color:var(--bg);color:var(--bg)}
+.contact .btn.primary{background:var(--yellow);color:var(--on-yellow);border-color:var(--yellow)}
+.links{list-style:none;margin:0;padding:0}
+.links li{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid color-mix(in srgb,var(--bg) 18%,transparent);flex-wrap:wrap}
+.links li:first-child{border-top:1px solid color-mix(in srgb,var(--bg) 18%,transparent)}
+.links span{opacity:.75}
+.links a{color:var(--bg);font-weight:700;overflow-wrap:anywhere}
+#copied{min-height:1.4em;font-size:14px;margin:10px 0 0;opacity:.85}
+
+footer{padding:26px 0 40px;font-size:14px;color:var(--slate)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.lightbox{border:0;padding:0;background:transparent;max-width:min(1200px,94vw)}
+.lightbox::backdrop{background:rgba(10,14,18,.85)}
+.lightbox img{display:block;max-width:100%;max-height:84vh;border-radius:8px}
+.lightbox p{color:#eef1f4;font-size:14px;margin:10px 0 0;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lightbox button{font:700 14px/1 Manrope,system-ui,sans-serif;background:#eef1f4;color:#101418;border:0;border-radius:6px;padding:0 16px;min-height:40px;cursor:pointer}
+
+@media(max-width:900px){
+.intro,.about,.head,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+.proj{grid-template-columns:minmax(0,1fr);gap:16px}
+.now{grid-template-columns:minmax(0,1fr)}
+.skills{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}
+.stats .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+.stat,.stat+.stat{padding:20px 16px 20px 0;border-right:0;border-bottom:1px solid color-mix(in srgb,var(--bg) 18%,transparent)}
+.stat:nth-child(even){padding-left:16px}
+}
+@media(max-width:600px){
+.top nav a:not(.hire){display:none}
+.xp li{grid-template-columns:minmax(0,1fr);gap:4px}
+.skills{grid-template-columns:minmax(0,1fr)}
+.shots{grid-template-columns:repeat(2,minmax(0,1fr))}
+.stat:nth-child(even){padding-left:12px}
+}
+@media(prefers-reduced-motion:no-preference){.btn{transition:transform .15s ease}}
+@media print{
+:root{color-scheme:light;--bg:#fff;--ink:#101418;--slate:#4a5562;--rule:#d8dce1;--panel:#fff}
+.top,.cta,.shot,.shots,.lightbox,#copy{display:none!important}
+body{font-size:11pt}
+section{padding:18pt 0;break-inside:auto}
+.proj,.xp li{break-inside:avoid}
+.stats,.contact{background:#fff;color:#101418}
+.stat{border-color:#d8dce1!important}
+.contact .wrap>div:first-child p,.contact h2{display:none}
+.links a{color:#101418}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">Lwamba Musa Najib</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#building">Building</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a class="hire" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="intro">
+      <div>
+        <h1>Lwamba Musa Najib</h1>
+        <p class="role">Full-stack software engineer building web and Android systems for savings groups, payroll and retail.</p>
+        <p class="sum">I design the database, write the API and ship the interface, then take it all the way to a live release on a server or the Google Play Store. Most of my work handles money, so correctness, permissions and clear audit trails come first.</p>
+        <div class="cta">
+          <a class="btn primary" href="#work">View case studies</a>
+          <a class="btn" href="https://github.com/Lwamba-Najib">GitHub profile</a>
+        </div>
+      </div>
+      <aside class="card" aria-label="At a glance">
+        <p class="avail"><span class="dot" aria-hidden="true"></span>Available for freelance and full-time roles</p>
+        <ul class="facts">
+          <li><span>Based in</span><span>Uganda (EAT, UTC+3)</span></li>
+          <li><span>Platforms</span><span>Web, Android</span></li>
+          <li><span>Core stack</span><span>Laravel, React, Vue.js</span></li>
+          <li><span>Data</span><span>SQL, PostgreSQL</span></li>
+          <li><span>Domain</span><span>Fintech, HR, retail</span></li>
+        </ul>
+      </aside>
+    </div>
+
+    <figure class="shot">
+      <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>Employee management system · dashboard</span></div>
+      <button type="button" data-full="img/ems-dashboard.jpg" data-cap="Employee management system: dashboard with headcount, payroll total, search and filters"><img src="img/ems-dashboard.jpg" alt="Employee management system dashboard with summary cards and a table of employees"></button>
+    </figure>
+  </div>
+
+  <div class="stats">
+    <div class="wrap">
+      <div class="stat key"><b>5 systems</b><span>built or maintained, in real use</span></div>
+      <div class="stat"><b>Paying client</b><span>running my own product, Buildtrack</span></div>
+      <div class="stat"><b>Android</b><span>signed release builds for Google Play</span></div>
+      <div class="stat"><b>End to end</b><span>database, API, UI and deployment</span></div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="head"><h2>About me</h2><p>An engineer who owns the whole system, from the schema to the release.</p></div>
+      <div class="about">
+        <div>
+          <p>I work across the stack: React, Vue.js and Capacitor on the front end, Laravel and PHP behind it, Kotlin when a native Android app needs fixing, and PostgreSQL holding it together.</p>
+          <p>The people using my software are savings group members checking loans on their phones, HR teams running monthly payroll, and shop owners who need to know what is in the drawer at the end of the day. They can't afford for the numbers to be wrong, so I build with that in mind.</p>
+          <p>I also look after the data and infrastructure: I write SQL against production databases to investigate problems and correct records, migrate databases between hosts, and run my own deployments on Docker, Render and cPanel servers.</p>
+        </div>
+        <div class="ways">
+          <div class="card"><h3>Rules live on the server</h3><p>Permissions, prices and pay calculations are checked by the API, never trusted from the browser.</p></div>
+          <div class="card"><h3>Works on a bad connection</h3><p>Offline-first where it matters: records are saved on the device and sync once the network returns.</p></div>
+          <div class="card"><h3>Every data fix is reversible</h3><p>Back up first, check dependencies, keep the original, and show the query behind every figure.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="head"><h2>Selected work</h2><p>Five systems in production or on their way there. Each entry covers what the system does, what I built, and a problem I solved along the way.</p></div>
+
+      <article class="proj">
+        <div class="meta">
+          <span class="tag live">In use by a paying client</span>
+          <h3>Buildtrack</h3>
+          <p class="type">Inventory, sales and finance platform for retail businesses. My own product, sole developer.</p>
+          <ul class="stack"><li>Laravel</li><li>Vue.js</li><li>PostgreSQL</li><li>Neon</li><li>Docker</li><li>Render</li></ul>
+        </div>
+        <div class="body">
+          <p>Covers stock coming in, sales going out and where the money is at the end of the day. I'm extending it based on the client's feedback.</p>
+          <h4>What I built</h4>
+          <ul>
+            <li>Point of sale with barcode scanning, selling by piece or unit, credit sales and a "Who Owes Me" ledger. Prices can change at the till but never below cost.</li>
+            <li>Money tracked across cash, mobile money and bank, with a daily cash count that shows any shortfall and locks the day.</li>
+            <li>Profit counted when money is actually collected, so credit sales don't inflate it. Nine reports, including weekly performance and profit and loss, exported to Excel.</li>
+            <li>Payroll for workers without logins: PAYE and LST deductions, approved pay advances and running balances.</li>
+            <li>Offline mode: sales, deliveries and expenses are stored on the device and uploaded once, with their original time, when the connection returns.</li>
+            <li>Per-action permissions checked on the server, a history of every change, and a deploy pipeline that rolls back if a migration fails.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="meta">
+          <span class="tag">Built from scratch</span>
+          <h3>Employee management system</h3>
+          <p class="type">HR and payroll web app. Sole developer: database, API and interface.</p>
+          <ul class="stack"><li>Laravel 13</li><li>PHP 8.3</li><li>Sanctum</li><li>React 19</li><li>React Router</li><li>Vite</li><li>SQL</li></ul>
+        </div>
+        <div class="body">
+          <p>Keeps complete staff records, runs monthly payroll and records who changed what.</p>
+          <div class="shots">
+            <figure><button type="button" data-full="img/ems-payroll.jpg" data-cap="Salary management: monthly payroll with gross, net and payment status"><img src="img/ems-payroll.jpg" alt="Salary management screen listing monthly payroll records" loading="lazy"></button><figcaption>Monthly payroll</figcaption></figure>
+            <figure><button type="button" data-full="img/ems-audit.jpg" data-cap="Audit log: an update expanded to show old and new values"><img src="img/ems-audit.jpg" alt="Audit log with one entry expanded to show old and new values" loading="lazy"></button><figcaption>Audit trail</figcaption></figure>
+            <figure><button type="button" data-full="img/ems-profile.jpg" data-cap="Employee profile with payroll and statutory details"><img src="img/ems-profile.jpg" alt="Employee profile dialog with personal, bank, TIN and NSSF details" loading="lazy"></button><figcaption>Employee profile</figcaption></figure>
+          </div>
+          <p class="note">Screenshots from the running app with demo data. Select one to enlarge.</p>
+          <h4>What I built</h4>
+          <ul>
+            <li>Employee records with photo uploads and the fields Ugandan payroll needs: TIN, NSSF number, bank details, employment type and supervisor.</li>
+            <li>Monthly payroll with allowances, bonuses, PAYE, NSSF and loan deductions. Gross and net pay are calculated on the server so totals can't be altered in the browser.</li>
+            <li>Token login with Laravel Sanctum, password reset with hashed tokens, and admin and user roles. Only an admin can create another admin.</li>
+            <li>Full audit trail: every login, create, update and delete is stored with the user, old and new values, IP address and device, searchable by user, module, action and date.</li>
+            <li>Soft deletes keep employee and payroll history recoverable.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="meta">
+          <span class="tag">Fully developed, signed release</span>
+          <h3>E-Gwoko VSLA mobile app</h3>
+          <p class="type">Android app for village savings and loan associations. Lead developer on the mobile build.</p>
+          <ul class="stack"><li>React</li><li>Vite</li><li>Capacitor</li><li>Android</li><li>Laravel 11</li><li>Google Play</li></ul>
+        </div>
+        <div class="body">
+          <p>Lets group members and officers track savings, loans and group activity from their phones.</p>
+          <h4>What I built</h4>
+          <ul>
+            <li>The app in React and Vite, packaged for Android with Capacitor and connected to a Laravel 11 API.</li>
+            <li>The full release process: signing keys, signed app bundles and the Google Play listing.</li>
+            <li>Next: an in-app member onboarding module so officers can register members without going to the web portal.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="meta">
+          <span class="tag">Ongoing service work</span>
+          <h3>VSLA web platform and payments API</h3>
+          <p class="type">Web portal, payments back end and database behind E-Gwoko.</p>
+          <ul class="stack"><li>SQL</li><li>Database views</li><li>PHP</li><li>Laravel 11</li><li>cPanel</li><li>Payments API</li><li>USSD</li></ul>
+        </div>
+        <div class="body">
+          <p>Serves savings groups and their mobile money payments. I review the back end, maintain the portal on a production server and audit the data.</p>
+          <div class="case">
+            <b>Case study: group balances shown too high</b>
+            <p><strong>Problem.</strong> Some savings groups were shown far more money than they held, and could request loans the group couldn't cover.</p>
+            <p><strong>Cause.</strong> The database view that calculates each group's balance only deducted loans still waiting to be paid. Once a payout was confirmed, the loan dropped out of the sum.</p>
+            <p><strong>Fix.</strong> I corrected the view after confirming that no other view, routine or trigger depended on it, and kept the original definition so the change could be reversed.</p>
+            <p class="res">Result: balances matched the real money, roughly ten times lower in the worst case, with no transaction records changed.</p>
+          </div>
+          <h4>Also</h4>
+          <ul>
+            <li>SQL audits of the production database that traced approved loans never paid out and a payout timeout that made successful payments look failed.</li>
+            <li>Findings written up as reports for the team, with the queries behind every figure and a backup before any change.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="meta">
+          <span class="tag">Maintenance</span>
+          <h3>E-Gwoko legacy Android app</h3>
+          <p class="type">Native Android app still used by members while the new platform takes over.</p>
+          <ul class="stack"><li>Kotlin</li><li>Android</li><li>REST APIs</li><li>Debugging</li></ul>
+        </div>
+        <div class="body">
+          <div class="case">
+            <b>Case study: correct PINs rejected at login</b>
+            <p><strong>Problem.</strong> After an update, most members couldn't log in, even with the right phone number and PIN.</p>
+            <p><strong>Cause.</strong> The server returned an empty wallet field for most groups. The app treated it as required and crashed, and a catch-all handler showed the crash as "Invalid Phone Number or Password".</p>
+            <p class="res">Result: making the field optional restored logins, confirmed on a live test group.</p>
+          </div>
+          <h4>Also</h4>
+          <ul>
+            <li>Kept the Retry button on failed loan payouts until the money is actually paid out.</li>
+            <li>Gave group officers (chair, secretary, treasurer) admin rights and moved the app to the new brand palette.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="building">
+    <div class="wrap">
+      <div class="head"><h2>What I'm building now</h2><p>My own products, built alongside client work.</p></div>
+      <div class="now">
+        <article class="card">
+          <span class="tag">In development</span>
+          <h3>Mobile money payments platform</h3>
+          <p>One API for collecting and paying out MTN Mobile Money and Airtel Money from any back end: Laravel, plain PHP, Node or Supabase. It keeps checking pending payments until they settle, sends signed webhooks with retries, and gives teams a dashboard to find and retry failed payouts.</p>
+          <p>It runs on top of licensed payment aggregators, so it never holds customer money. It grew out of the payment problems I traced in production on the VSLA platform.</p>
+          <ul class="stack"><li>Laravel</li><li>PostgreSQL</li><li>Supabase</li><li>REST API</li><li>Webhooks</li></ul>
+        </article>
+        <article class="card">
+          <span class="tag">Prototype</span>
+          <h3>Street Racer UG</h3>
+          <p>A free-to-play 3D racing game against bots on Ugandan streets, with boda-bodas and matatu taxis in the traffic. The prototype runs as an Android app.</p>
+          <ul class="stack"><li>Three.js</li><li>JavaScript</li><li>Android</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="head"><h2>Experience</h2><p>Recent roles and the work delivered in each.</p></div>
+      <ul class="xp">
+        <li><time>2026 – present</time><div><h3>Founder, mobile money payments platform</h3><p>Designing one API and dashboard that lets any back end collect and pay out through MTN Mobile Money and Airtel Money, with automatic status checks, retries and reconciliation.</p></div></li>
+        <li><time>2026 – present</time><div><h3>Founder and sole developer, Buildtrack</h3><p>Designed, built and deployed a retail inventory, sales and finance platform now used by a paying client. Currently adding wallets, payroll and offline sales.</p></div></li>
+        <li><time>2026 – present</time><div><h3>Software developer, E-Gwoko VSLA platform</h3><p>Lead on the new Capacitor Android app (signed release 1.2, October), reviewed and fixed the Laravel 11 API, corrected group balance calculations (November) and restored logins on the legacy Kotlin app.</p></div></li>
+        <li><time>2026</time><div><h3>Full-stack developer, employee management system</h3><p>Built an HR and payroll system from scratch in Laravel 13 and React 19, with server-side pay calculation, role-based access and a full audit trail.</p></div></li>
+        <li><time>Ongoing</time><div><h3>Freelance and team collaboration</h3><p>Contribute to client codebases through GitHub and GitLab, from feature upgrades such as reporting filters to code review and database support.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="head"><h2>Skills</h2><p>Tools I use in production work.</p></div>
+      <div class="skills">
+        <div class="skill"><h3>Languages</h3><ul><li>JavaScript</li><li>PHP</li><li>Kotlin</li><li>SQL</li></ul></div>
+        <div class="skill"><h3>Front end</h3><ul><li>React and Vite</li><li>Vue.js</li><li>jQuery</li><li>Tailwind CSS</li><li>Materialize CSS</li></ul></div>
+        <div class="skill"><h3>Back end and mobile</h3><ul><li>Laravel 11 and 13</li><li>Laravel Sanctum</li><li>REST APIs</li><li>Capacitor</li><li>Android SDK</li></ul></div>
+        <div class="skill"><h3>Databases</h3><ul><li>PostgreSQL, Neon</li><li>Supabase</li><li>Query tuning and data fixes</li><li>Migrations between hosts</li></ul></div>
+        <div class="skill"><h3>Delivery</h3><ul><li>Git, GitHub, GitLab</li><li>Docker, Render</li><li>cPanel, Linux</li><li>Google Play Console</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div>
+        <h2>Let's build something reliable.</h2>
+        <p>I'm open to freelance projects and full-time roles in web and mobile development, especially fintech and business software. I usually reply within a day.</p>
+        <div class="cta">
+          <button class="btn primary" type="button" id="copy">Copy email address</button>
+          <a class="btn" href="https://github.com/Lwamba-Najib">See my GitHub</a>
+        </div>
+        <p id="copied" role="status"></p>
+      </div>
+      <ul class="links">
+        <li><span>Email</span><a href="mailto:najib2019reloaded@gmail.com">najib2019reloaded@gmail.com</a></li>
+        <li><span>GitHub</span><a href="https://github.com/Lwamba-Najib">github.com/Lwamba-Najib</a></li>
+        <li><span>WhatsApp</span><a href="https://wa.me/256708853349">+256 708 853 349</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Lwamba Musa Najib</span><span>Full-stack software engineer, Uganda</span></div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+  <img id="lightbox-img" src="" alt="">
+  <p><span id="lightbox-cap"></span><button type="button" id="lightbox-close">Close</button></p>
+</dialog>
+
+<script>
+{
+  const box = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  const cap = document.getElementById('lightbox-cap');
+  document.querySelectorAll('button[data-full]').forEach(b => {
+    b.addEventListener('click', () => {
+      img.src = b.getAttribute('data-full');
+      img.alt = b.querySelector('img').alt;
+      cap.textContent = b.getAttribute('data-cap');
+      if (box.showModal) box.showModal();
+    });
+  });
+  document.getElementById('lightbox-close').addEventListener('click', () => box.close());
+  box.addEventListener('click', e => { if (e.target === box) box.close(); });
+
+  const email = 'najib2019reloaded@gmail.com';
+  const out = document.getElementById('copied');
+  document.getElementById('copy').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(email); out.textContent = 'Copied: ' + email; }
+    catch (e) { out.textContent = 'Email: ' + email; }
+  });
+}
+</script>
+</body>
+</html>
