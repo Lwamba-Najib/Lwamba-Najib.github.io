@@ -47,7 +47,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.02em;line-height:1.08;margin:0;text-wr
 .top nav a:hover{color:var(--ink);background:var(--panel)}
 .top nav a.hire{background:var(--ink);color:var(--bg);margin-left:6px}
 
-.hero{padding:clamp(40px,6vw,80px) 0 0}
+.hero{padding:clamp(40px,6vw,80px) 0 clamp(40px,5vw,64px)}
 .intro{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:end}
 .avatar{display:block;width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:3px solid var(--yellow);margin:0 0 20px}
 .hero h1{font-size:clamp(40px,6vw,64px);margin-bottom:18px}
@@ -227,11 +227,6 @@ section{padding:18pt 0;break-inside:auto}
         </ul>
       </aside>
     </div>
-
-    <figure class="shot">
-      <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>Employee management system · dashboard</span></div>
-      <button type="button" data-full="img/ems-dashboard.jpg" data-cap="Employee management system: dashboard with headcount, payroll total, search and filters"><img src="img/ems-dashboard.jpg" alt="Employee management system dashboard with summary cards and a table of employees"></button>
-    </figure>
   </div>
 
   <div class="stats">
@@ -302,7 +297,8 @@ section{padding:18pt 0;break-inside:auto}
         </div>
         <div class="body">
           <p>Keeps complete staff records, runs monthly payroll and records who changed what.</p>
-          <div class="shots">
+          <div class="shots two">
+            <figure><button type="button" data-full="img/ems-dashboard.jpg" data-cap="Employee management system: dashboard with headcount, payroll total, search and filters"><img src="img/ems-dashboard.jpg" alt="Employee management system dashboard with summary cards and a table of employees" loading="lazy"></button><figcaption>Dashboard</figcaption></figure>
             <figure><button type="button" data-full="img/ems-payroll.jpg" data-cap="Salary management: monthly payroll with gross, net and payment status"><img src="img/ems-payroll.jpg" alt="Salary management screen listing monthly payroll records" loading="lazy"></button><figcaption>Monthly payroll</figcaption></figure>
             <figure><button type="button" data-full="img/ems-audit.jpg" data-cap="Audit log: an update expanded to show old and new values"><img src="img/ems-audit.jpg" alt="Audit log with one entry expanded to show old and new values" loading="lazy"></button><figcaption>Audit trail</figcaption></figure>
             <figure><button type="button" data-full="img/ems-profile.jpg" data-cap="Employee profile with payroll and statutory details"><img src="img/ems-profile.jpg" alt="Employee profile dialog with personal, bank, TIN and NSSF details" loading="lazy"></button><figcaption>Employee profile</figcaption></figure>
