@@ -13,8 +13,9 @@
 <meta property="og:title" content="Lwamba Musa Najib, full-stack software engineer">
 <meta property="og:description" content="Web and Android systems for savings groups, payroll and retail. Developer of E-Gwoko VSLA and Buildtrack.">
 <meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://lwamba-najib.github.io/img/avatar.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Lwamba Musa Najib","jobTitle":"Full-stack software engineer","email":"mailto:najib2019reloaded@gmail.com","address":{"@type":"PostalAddress","addressCountry":"UG"},"url":"https://lwamba-najib.github.io/","sameAs":["https://github.com/Lwamba-Najib"],"knowsAbout":["Laravel","React","Vue.js","PostgreSQL","Supabase","Capacitor","Android","Mobile money payments","VSLA software","Payroll systems"],"workExample":[{"@type":"SoftwareApplication","name":"E-Gwoko VSLA","operatingSystem":"Android","applicationCategory":"FinanceApplication"},{"@type":"SoftwareApplication","name":"Buildtrack","applicationCategory":"BusinessApplication"},{"@type":"SoftwareApplication","name":"Employee management system","applicationCategory":"BusinessApplication"}]}
+{"@context":"https://schema.org","@type":"Person","name":"Lwamba Musa Najib","jobTitle":"Full-stack software engineer","image":"https://lwamba-najib.github.io/img/avatar.jpg","email":"mailto:najib2019reloaded@gmail.com","address":{"@type":"PostalAddress","addressCountry":"UG"},"url":"https://lwamba-najib.github.io/","sameAs":["https://github.com/Lwamba-Najib"],"knowsAbout":["Laravel","React","Vue.js","PostgreSQL","Supabase","Capacitor","Android","Mobile money payments","VSLA software","Payroll systems"],"workExample":[{"@type":"SoftwareApplication","name":"E-Gwoko VSLA","operatingSystem":"Android","applicationCategory":"FinanceApplication"},{"@type":"SoftwareApplication","name":"Buildtrack","applicationCategory":"BusinessApplication"},{"@type":"SoftwareApplication","name":"Employee management system","applicationCategory":"BusinessApplication"}]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,6 +49,7 @@ h1,h2,h3{font-weight:800;letter-spacing:-.02em;line-height:1.08;margin:0;text-wr
 
 .hero{padding:clamp(40px,6vw,80px) 0 0}
 .intro{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:end}
+.avatar{display:block;width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:3px solid var(--yellow);margin:0 0 20px}
 .hero h1{font-size:clamp(40px,6vw,64px);margin-bottom:18px}
 .hero .role{font-size:clamp(19px,2.2vw,23px);font-weight:600;color:var(--ink);margin:0 0 14px;max-width:34ch;line-height:1.4}
 .hero .sum{color:var(--slate);margin:0 0 26px;max-width:58ch}
@@ -205,6 +207,7 @@ section{padding:18pt 0;break-inside:auto}
   <div class="wrap hero">
     <div class="intro">
       <div>
+        <img class="avatar" src="img/avatar.jpg" alt="Lwamba Musa Najib" width="120" height="120">
         <h1>Lwamba Musa Najib</h1>
         <p class="role">Full-stack software engineer building web and Android systems for savings groups, payroll and retail.</p>
         <p class="sum">I design the database, write the API and ship the interface, then take it all the way to a live release on a server or the Google Play Store. Most of my work handles money, so correctness, permissions and clear audit trails come first.</p>
@@ -217,7 +220,7 @@ section{padding:18pt 0;break-inside:auto}
         <p class="avail"><span class="dot" aria-hidden="true"></span>Available for freelance and full-time roles</p>
         <ul class="facts">
           <li><span>Based in</span><span>Uganda (EAT, UTC+3)</span></li>
-          <li><span>Platforms</span><span>Web, Android</span></li>
+          <li><span>Platforms</span><span>Web, PWA, Android, APIs</span></li>
           <li><span>Core stack</span><span>Laravel, React, Vue.js</span></li>
           <li><span>Data</span><span>SQL, PostgreSQL</span></li>
           <li><span>Domain</span><span>Fintech, HR, retail</span></li>
@@ -416,7 +419,7 @@ section{padding:18pt 0;break-inside:auto}
       <div class="head"><h2>What I'm building now</h2><p>My own products, built alongside client work.</p></div>
       <div class="now">
         <article class="card">
-          <span class="tag">In development</span>
+          <span class="tag">Starting now</span>
           <h3>Mobile money payments platform</h3>
           <p>One API for collecting and paying out MTN Mobile Money and Airtel Money from any back end: Laravel, plain PHP, Node or Supabase. It keeps checking pending payments until they settle, sends signed webhooks with retries, and gives teams a dashboard to find and retry failed payouts.</p>
           <p>It runs on top of licensed payment aggregators, so it never holds customer money. It grew out of the payment problems I traced in production on the VSLA platform.</p>
@@ -426,6 +429,11 @@ section{padding:18pt 0;break-inside:auto}
           <span class="tag">Prototype</span>
           <h3>Street Racer UG</h3>
           <p>A free-to-play 3D racing game against bots on Ugandan streets, with boda-bodas and matatu taxis in the traffic. The prototype runs as an Android app.</p>
+          <div class="shots">
+            <figure><button type="button" data-full="img/game-menu.jpg" data-cap="Street Racer UG: pick a Ugandan road, laps and bot level"><img src="img/game-menu.jpg" alt="Street Racer UG menu with Ugandan road choices" loading="lazy"></button><figcaption>Menu</figcaption></figure>
+            <figure><button type="button" data-full="img/game-start.jpg" data-cap="Street Racer UG: countdown on the Kampala City Loop against the bots"><img src="img/game-start.jpg" alt="Race countdown with bot cars on a city street" loading="lazy"></button><figcaption>Start grid</figcaption></figure>
+            <figure><button type="button" data-full="img/game-race.jpg" data-cap="Street Racer UG: racing with the speedometer, nitro bar and track map"><img src="img/game-race.jpg" alt="Yellow car racing past the start line" loading="lazy"></button><figcaption>Racing</figcaption></figure>
+          </div>
           <ul class="stack"><li>Three.js</li><li>JavaScript</li><li>Android</li></ul>
         </article>
       </div>
@@ -450,7 +458,7 @@ section{padding:18pt 0;break-inside:auto}
       <div class="head"><h2>Skills</h2><p>Tools I use in production work.</p></div>
       <div class="skills">
         <div class="skill"><h3>Languages</h3><ul><li>JavaScript</li><li>PHP</li><li>Kotlin</li><li>SQL</li></ul></div>
-        <div class="skill"><h3>Front end</h3><ul><li>React and Vite</li><li>Vue.js</li><li>jQuery</li><li>Tailwind CSS</li><li>Materialize CSS</li></ul></div>
+        <div class="skill"><h3>Front end</h3><ul><li>React and Vite</li><li>Vue.js</li><li>Progressive Web Apps</li><li>jQuery</li><li>Tailwind CSS</li><li>Materialize CSS</li></ul></div>
         <div class="skill"><h3>Back end and mobile</h3><ul><li>Laravel 11 and 13</li><li>Laravel Sanctum</li><li>REST APIs</li><li>Capacitor</li><li>Android SDK</li></ul></div>
         <div class="skill"><h3>Databases</h3><ul><li>PostgreSQL, Neon</li><li>Supabase</li><li>Query tuning and data fixes</li><li>Migrations between hosts</li></ul></div>
         <div class="skill"><h3>Delivery</h3><ul><li>Git, GitHub, GitLab</li><li>Docker, Render</li><li>cPanel, Linux</li><li>Google Play Console</li></ul></div>
